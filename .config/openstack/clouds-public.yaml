@@ -1,0 +1,9 @@
+public-clouds:
+  elastx:
+    auth:
+      auth_url: https://ops.elastx.net:5000/v2.0
+    region_name: regionOne
+  citycloud:
+    auth:
+      auth_url: https://identity1.citycloud.com:5000/v3
+    region_name: Sto2
