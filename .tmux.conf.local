@@ -1,0 +1,44 @@
+# Add your local tmux config here
+
+# I like C-k
+unbind -n C-j
+unbind -n C-k
+
+# ISO Time
+set-option -g status-right '%H:%M'
+
+# if run as "tmux attach", create a session if one does not already exist
+new-session -n $HOST
+
+# Enable native Mac OS X copy/paste
+#set-option -g default-command "/bin/bash -c 'which reattach-to-user-namespace >/dev/null && exec reattach-to-user-namespace $SHELL -l || exec $SHELL -l'"
+# OR
+set-option -g default-command "/opt/boxen/homebrew/bin/reattach-to-user-namespace -l /opt/boxen/homebrew/bin/fish"
+
+# Bind ']' to use pbpaste
+bind ] run "/opt/boxen/homebrew/bin/reattach-to-user-namespace pbpaste | /opt/boxen/homebrew/bin/tmux load-buffer - && /opt/boxen/homebrew/bin/tmux paste-buffer"
+
+# New window with default path set to last path
+bind '"' split-window -c "#{pane_current_path}"
+bind % split-window -h -c "#{pane_current_path}"
+bind c new-window -c "#{pane_current_path}"
+
+bind S new-session
+
+# Protect agains lockups when flooded. See
+# http://blog.fraggod.net/2014/09/23/tmux-rate-limiting-magic-against-terminal-spamflood-lock-ups.html
+set -g c0-change-trigger 150
+set -g c0-change-interval 100
+
+# Setup tmux-powerline
+set-option -g status on
+set-option -g status-interval 2
+set-option -g status-justify "centre"
+set-option -g status-left-length 60
+set-option -g status-right-length 90
+set-option -g status-left "#(~/.config/tmux/tmux-powerline/powerline.sh left)"
+set-option -g status-right "#(~/.config/tmux/tmux-powerline/powerline.sh right)"
+
+set-window-option -g window-status-current-format "#[fg=colour235, bg=colour27]#[fg=colour255, bg=colour27] #I ⮁ #W #[fg=colour27, bg=colour235]⮀"
+bind C-[ run '~/.config/tmux/tmux-powerline/mute_powerline.sh left'      # Mute left statusbar.
+bind C-] run '~/.config/tmux/tmux-powerline/mute_powerline.sh right'     # Mute right statusbar.
