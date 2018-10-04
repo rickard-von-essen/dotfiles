@@ -1,0 +1,1 @@
+alias smlnj="socat READLINE EXEC:sml"
