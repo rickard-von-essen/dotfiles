@@ -19,5 +19,7 @@ if [ "$system_type" = "Darwin" ]; then
     echo "Setting iTerm preference folder"
     defaults write com.googlecode.iterm2 PrefsCustomFolder "$HOME/.iterm2"
   fi
-
 fi
+
+echo "Updating the yadm repo origin URL"
+yadm remote set-url origin "git@github.com:rickard-von-essen/dotfiles.git"
