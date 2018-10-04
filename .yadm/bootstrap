@@ -21,5 +21,10 @@ if [ "$system_type" = "Darwin" ]; then
   fi
 fi
 
+if [ ! -d "$HOME/.vim/bundle/Vundle.vim" ]; then
+  git clone https://github.com/VundleVim/Vundle.vim.git "$HOME/.vim/bundle/Vundle.vim"
+  vim +PluginInstall +qall
+fi
+
 echo "Updating the yadm repo origin URL"
 yadm remote set-url origin "git@github.com:rickard-von-essen/dotfiles.git"
