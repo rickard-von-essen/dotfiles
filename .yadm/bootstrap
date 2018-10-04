@@ -28,5 +28,10 @@ if [ ! -d "$HOME/.vim/bundle/Vundle.vim" ]; then
   python "$HOME/.vim/bunlde/YouCompleteMe/install.py" --clang-completer --go-completer --js-completer --java-completer
 fi
 
+if [ ! -f "$HOME/.config/fish/functions/fisher.fish" ]; then
+  curl -Lo "$HOME/.config/fish/functions/fisher.fish" --create-dirs https://git.io/fisher
+  fish -c 'fisher'
+fi
+
 echo "Updating the yadm repo origin URL"
 yadm remote set-url origin "git@github.com:rickard-von-essen/dotfiles.git"
