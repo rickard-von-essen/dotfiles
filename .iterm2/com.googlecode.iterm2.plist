@@ -554,7 +554,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>641 151 796 486 0 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 55 570 402 0 0 1440 900 </string>
+	<string>53 317 570 402 0 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>0 18 717 859 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -3536,6 +3536,10 @@
 	<true/>
 	<key>NoSyncInstallationId</key>
 	<string>B6811B9E-6133-400C-B746-5373858B5E75</string>
+	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
+	<true/>
+	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
+	<integer>0</integer>
 	<key>NoSyncPermissionToShowTip</key>
 	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
@@ -3616,7 +3620,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-09-30T15:46:00Z</date>
+	<date>2018-10-05T11:04:50Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
@@ -3667,6 +3671,8 @@
 	<string>/-+\~_.</string>
 	<key>findIgnoreCase_iTerm</key>
 	<true/>
+	<key>findMode_iTerm</key>
+	<integer>0</integer>
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
