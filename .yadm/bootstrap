@@ -1,36 +1,38 @@
 #!/usr/bin/env bash
+set -o nounset
 
 system_type=$(uname -s)
+export system_type
 export PATH=/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
+
+# -- OS / Distribution specific bootstrap --
 
 if [ "$system_type" = "Darwin" ]; then
+  "$DIR/bootstrap.darwin"
+fi
 
-  # install homebrew if it's missing
-  if ! command -v brew >/dev/null 2>&1; then
-    echo "Installing homebrew"
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  fi
+if [ "$system_type" = "Linux" ]; then
+  "$DIR/bootstrap.linux"
 
-  if [ -f "$HOME/.Brewfile" ]; then
-    echo "Updating homebrew bundle"
-    brew bundle --global
-  fi
+  dist=$(grep ^ID= /etc/os-release | cut -d= -f2)
 
-  ln -s /usr/local/opt/tarsnap-gui/Tarsnap.app /Applications/Tarsnap.app
-  ln -s /usr/local/opt/macvim/MacVim.app /Applications/MacVim.app
-
-  if [ -d "$HOME/.iterm2" ]; then
-    echo "Setting iTerm preference folder"
-    defaults write com.googlecode.iterm2 PrefsCustomFolder "$HOME/.iterm2"
+  if [ "$dist" = "fedora" ]; then
+    "$DIR/bootstrap.fedora"
   fi
 fi
 
+
+# -- Generic bootstrap --
+
+echo "Installing Vundle and Vim plugins"
 if [ ! -d "$HOME/.vim/bundle/Vundle.vim" ]; then
   git clone https://github.com/VundleVim/Vundle.vim.git "$HOME/.vim/bundle/Vundle.vim"
   vim +PluginInstall +qall
   python "$HOME/.vim/bundle/YouCompleteMe/install.py" --clang-completer --go-completer --js-completer --java-completer
 fi
 
+echo "Installing fisherman"
 if [ ! -f "$HOME/.config/fish/functions/fisher.fish" ]; then
   curl -Lo "$HOME/.config/fish/functions/fisher.fish" --create-dirs https://git.io/fisher
   fish -c 'fisher'
