@@ -16,7 +16,7 @@
   #pr = !sh -c 'stash pull-request $0'
   #browse = !sh -c 'stash browse'
   #www = !sh -c 'stash browse'
-	log1 = log --oneline
+  log1 = log --oneline
   flog = log --oneline --decorate=full --graph
   ilog = !sh -c 'git log --format=\"%Cred%h %Cblue%ad %Cgreen%aN <%aE> %Creset%s\" --date=iso '$@' | peco'
   fsha = !sh -c 'git log --format=\"%Cred%h %Cblue%ad %Cgreen%aN <%aE> %Creset%s\" --date=iso '$@' | peco | cut -d\\  -f1'
@@ -27,77 +27,39 @@
 [core]
   pager = less -F -X
   editor = vim
-	excludesfile = /opt/boxen/config/git/gitignore
   whitespace = blank-at-eol,trailing-space
 
 [color "diff"]
-	whitespace = red reverse
+  whitespace = red reverse
 
 [difftool]
-	prompt = false
+  prompt = false
 
 [mergetool]
-	keepBackup = false
-	prompt = false
+  keepBackup = false
+  prompt = false
 
 [color]
-ui = true
-
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+  ui = true
 
 [push]
-	default = current
+  default = current
 
 [user]
-	name = Rickard von Essen
-	email = rickard.von.essen@gmail.com
-	signingkey = 0xB7DB909C0672FC49
-
-[difftool "sourcetree"]
-cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-
-
-[diff]
-   tool = Kaleidoscope
-renameLimit = 100000
-
-[merge]
-   tool = Kaleidoscope
-
-[credential]
-#  helper = /opt/boxen/bin/boxen-git-credential
-#  helper = osxkeychain
+  name = Rickard von Essen
+  email = rickard.von.essen@gmail.com
+  signingkey = 0xB7DB909C0672FC49
 
 [hub]
-	protocol = ssh
-
-#[gh]
-#  protocol = ssh
-
-[difftool "sourcetree"]
-cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-  trustExitCode = true
-	path = 
-
-[difftool "Kaleidoscope"]
-	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-[mergetool "Kaleidoscope"]
-	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-  trustExitCode = true
-
-#####
-
+  protocol = ssh
 
 [filter "media"]
-	clean = git-media-clean %f
-	smudge = git-media-smudge %f
+  clean = git-media-clean %f
+  smudge = git-media-smudge %f
 [filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
-	required = true
-[gpg]
-	program = gpg1
-[commit]
-	template = /Users/rickard/.stCommitMsg
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge %f
+  required = true
+
+[include]
+  path = .gitconfig.os
