@@ -1,1 +1,1 @@
-set -x SHELL /opt/boxen/homebrew/bin/fish
+set -x SHELL fish
