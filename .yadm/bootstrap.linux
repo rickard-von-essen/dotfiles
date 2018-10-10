@@ -1,3 +1,10 @@
 #!/usr/bin/env bash
 
-# sudo dnf install -y < "$HOME/.pkg.fedora"
+GOOGLE_SDK_VER=220.0.0
+
+mkdir -p $HOME/local
+if [ ! -d $HOME/local/google-cloud-sdk ]; then
+  wget -O /tmp/google-cloud-sdk-${GOOGLE_SDK_VER}-linux-x86_64.tar.gz \
+    https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-${GOOGLE_SDK_VER}-linux-x86_64.tar.gz
+  tar zxvf /tmp/google-cloud-sdk-${GOOGLE_SDK_VER}-linux-x86_64.tar.gz $HOME/local/google-cloud-sdk
+fi

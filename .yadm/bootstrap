@@ -13,13 +13,14 @@ if [ "$system_type" = "Darwin" ]; then
 fi
 
 if [ "$system_type" = "Linux" ]; then
-  "$DIR/bootstrap.linux"
-
   dist=$(grep ^ID= /etc/os-release | cut -d= -f2)
 
   if [ "$dist" = "fedora" ]; then
     "$DIR/bootstrap.fedora"
   fi
+
+  "$DIR/bootstrap.linux"
+
 fi
 
 
