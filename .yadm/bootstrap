@@ -29,7 +29,7 @@ echo "Installing Vundle and Vim plugins"
 if [ ! -d "$HOME/.vim/bundle/Vundle.vim" ]; then
   git clone https://github.com/VundleVim/Vundle.vim.git "$HOME/.vim/bundle/Vundle.vim"
   vim +PluginInstall +qall
-  python "$HOME/.vim/bundle/YouCompleteMe/install.py" --clang-completer --go-completer --js-completer --java-completer
+  python3 "$HOME/.vim/bundle/YouCompleteMe/install.py" --clang-completer --go-completer --js-completer --java-completer
 fi
 
 echo "Installing fisherman"
