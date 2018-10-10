@@ -1,3 +1,24 @@
 #!/usr/bin/env bash
 
-sudo dnf install -y < "$HOME/.pkg.fedora"
+cat "$HOME/.pkg.fedora" | sudo xargs dnf install -y
+cat "$HOME/.pkg.snaps" | sudo xargs snap install
+sudo ln -s /var/lib/snapd/snap /
+cat "$HOME/.pkg.snaps.classic" | sudo xargs -I= snap install --classic =
+sudo dnf install -y fedora-workstation-repositories
+
+# Google Chrome
+sudo dnf config-manager --set-enabled google-chrome
+sudo dnf install -y google-chrome-beta
+
+# Docker CE
+sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
+sudo dnf config-manager --set-enabled docker-ce-edge
+sudo dnf install -y docker-ce
+sudo usermod -aG docker $USER
+sudo systemctl start docker
+
+# rbenv
+curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash
+
+# nodenv
+test ! -d $HOME/.nodenv; and git clone https://github.com/nodenv/nodenv.git $HOME/.nodenv

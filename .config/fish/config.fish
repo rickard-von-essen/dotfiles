@@ -1,6 +1,6 @@
-set fisher_home ~/.local/share/fisherman
-set fisher_config ~/.config/fisherman
-source $fisher_home/fisher.fish
+#set fisher_home ~/.local/share/fisherman
+#set fisher_config ~/.config/fisherman
+#source $fisher_home/fisher.fish
 
 #for file in $HOME/.config/fish/custom_pre/*.load
 #  source $file
