@@ -21,4 +21,11 @@ sudo systemctl start docker
 curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash
 
 # nodenv
-test ! -d $HOME/.nodenv; and git clone https://github.com/nodenv/nodenv.git $HOME/.nodenv
+if [ ! -d $HOME/.nodenv ]; then
+  git clone https://github.com/nodenv/nodenv.git $HOME/.nodenv
+fi
+
+. .bashrc
+if [ ! -d $(nodenv root)/plugins/node-build ]; then
+  git clone https://github.com/nodenv/node-build.git $(nodenv root)/plugins/node-build
+fi
