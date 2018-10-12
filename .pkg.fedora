@@ -45,9 +45,19 @@ nmap
 pandoc
 tree
 pass
+powerline
+powerline-docs
 pinentry
 pv
 pwgen
+python2-hglib
+python2-i3ipc
+python2-psutil
+python2-pyuv
+python3-hglib
+python3-i3ipc
+python3-psutil
+python3-pyuv
 qemu
 redis
 restic
@@ -62,6 +72,7 @@ terminator
 the_silver_searcher
 tigervnc
 tmux
+tmux-powerline
 topgit
 ykclient
 ykpers
@@ -73,6 +84,7 @@ yubikey-val
 yubioath-desktop
 yadm
 vim-enhanced
+vim-powerline
 vagrant
 vagrant-doc
 vagrant-libvirt
