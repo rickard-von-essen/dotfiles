@@ -190,7 +190,7 @@ bar {
         background #323232
         inactive_workspace #32323200 #32323200 #5c5c5c
     }
-    status_command i3status
+    status_command python3 /usr/share/powerline/i3/powerline-i3.py
     font pango:Hasklug Nerd Font 10
 }
 
