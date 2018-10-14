@@ -43,5 +43,8 @@ if [ ! -f "$HOME/.config/fish/functions/fisher.fish" ]; then
   fish -c 'fisher'
 fi
 
+echo "Python 3 Modules"
+cat $HOME/.pkg.py3 | xargs pip3 --user -y install
+
 echo "Updating the yadm repo origin URL"
 yadm remote set-url origin "git@github.com:rickard-von-essen/dotfiles.git"
