@@ -8,7 +8,6 @@
   mt = mergetool
   br = branch
   a = add
-  commit = commit -Ss
   oldest-ancestor = !zsh -c 'diff -u <(git rev-list --first-parent \"${1:-master}\") <(git rev-list --first-parent \"${2:-HEAD}\") | sed -ne \"s/^ //p\" | head -1' -
   svnup = svn rebase
   svnci = svn dcommit
@@ -63,3 +62,5 @@
 
 [include]
   path = .gitconfig.os
+[commit]
+  gpgsign = true
