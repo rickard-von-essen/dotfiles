@@ -554,7 +554,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>234 56 918 512 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>23 152 570 402 0 0 1440 877 </string>
+	<string>23 152 570 402 0 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>0 18 717 859 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -2980,7 +2980,7 @@
 			<key>Columns</key>
 			<integer>80</integer>
 			<key>Command</key>
-			<string>/usr/bin/bash</string>
+			<string>/bin/bash</string>
 			<key>Cursor Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -3620,7 +3620,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-10-06T11:36:34Z</date>
+	<date>2018-10-15T11:18:24Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
