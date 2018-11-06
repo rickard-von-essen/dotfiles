@@ -69,3 +69,5 @@ set hidden
 let g:CtrlSpaceFileEngine = "file_engine_darwin_amd64"
 
 let g:ycm_python_binary_path = 'python3'
+
+au BufReadPost *.jinja set syntax=yaml
