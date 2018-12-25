@@ -1,3 +1,4 @@
+# vim: noexpandtab:tabstop=4:shiftwidth=4:syntax=gitconfig
 [mergetool "sourcetree"]
   cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
   trustExitCode = true

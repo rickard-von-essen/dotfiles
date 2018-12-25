@@ -1,2 +1,3 @@
+# vim: noexpandtab:tabstop=4:shiftwidth=4:syntax=gitconfig
 [include]
   path = .gitconfig.class
