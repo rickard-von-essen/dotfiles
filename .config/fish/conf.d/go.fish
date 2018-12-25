@@ -1,3 +1,4 @@
-test -d $HOME/src/go-code/bin; and set -x PATH $PATH $HOME/src/go-code/bin
-test -d $HOME/src/go-code; and set -x GOPATH $HOME/src/go-code
-test -d $HOME/.gvm/bin; and set -x PATH $HOME/.gvm/bin $PATH
+test -d $HOME/src/go-code/bin; and set -gx fish_user_path $fish_user_path $HOME/src/go-code/bin
+test -d $HOME/src/go-code; and set -gx GOPATH $HOME/src/go-code
+test -d $HOME/.gvm/bin; and set -gx fish_user_path $HOME/.gvm/bin $fish_user_path
+test -d $HOME/go/bin; and set -gx fish_user_path $HOME/go/bin $fish_user_path

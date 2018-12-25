@@ -1,1 +1,7 @@
-set -x PATH /Applications/MacVim.app/Contents/MacOS $HOME/bin $PATH
+set -g fish_user_paths \
+  /usr/local/sbin \
+  /Applications/MacVim.app/Contents/MacOS \
+  $HOME/Library/Python/3.7/bin \
+  $HOME/Library/Python/2.7/bin \
+  $HOME/bin \
+  $fish_user_paths

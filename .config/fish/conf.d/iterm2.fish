@@ -1,0 +1,1 @@
+/Users/rickard.von.essen/.config/fish/conf.d/iterm2.fish##Darwin
