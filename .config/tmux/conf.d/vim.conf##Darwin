@@ -1,5 +1,5 @@
 # vi is good
-setw -g mode-keys vi
+set -g mode-keys vi
 
 # use vim-like keys for splits and windows
 bind-key v split-window -h -c "#{pane_current_path}"
