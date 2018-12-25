@@ -1,1 +1,2 @@
-test -d $HOME/local/google-cloud-sdk/bin; and set -x PATH $HOME/local/google-cloud-sdk/bin $PATH
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f "$HOME/local/google-cloud-sdk/path.fish.inc" ]; . "$HOME/local/google-cloud-sdk/path.fish.inc"; end
