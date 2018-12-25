@@ -1,69 +1,69 @@
 # vim: noexpandtab:tabstop=4:shiftwidth=4
 [alias]
-  dt = difftool
-  branchlog = !sh -c \"git log `git oldest-ancestor`..\"
-  branchdiff = !sh -c \"git diff `git oldest-ancestor`..\"
-  permission-reset = !git diff -p -R | grep -E \"^(diff|(old|new) mode)\" | git apply
-  co = checkout
-  st = status
-  mt = mergetool
-  br = branch
-  a = add
-  oldest-ancestor = !zsh -c 'diff -u <(git rev-list --first-parent \"${1:-master}\") <(git rev-list --first-parent \"${2:-HEAD}\") | sed -ne \"s/^ //p\" | head -1' -
-  svnup = svn rebase
-  svnci = svn dcommit
-  #create-pull-request = !sh -c 'stash pull-request $0'
-  #pr = !sh -c 'stash pull-request $0'
-  #browse = !sh -c 'stash browse'
-  #www = !sh -c 'stash browse'
-  log1 = log --oneline
-  flog = log --oneline --decorate=full --graph
-  ilog = !sh -c 'git log --format=\"%Cred%h %Cblue%ad %Cgreen%aN <%aE> %Creset%s\" --date=iso '$@' | peco'
-  fsha = !sh -c 'git log --format=\"%Cred%h %Cblue%ad %Cgreen%aN <%aE> %Creset%s\" --date=iso '$@' | peco | cut -d\\  -f1'
-  clog = log --format='%Cred%h %Cblue%ad %Cgreen%aN <%aE> %G? %Creset%s' --date=iso
-  copr = !sh -c 'git checkout `git remote get-url origin| sed -e 's/\\.git$//g' | tr -d \\n`/pull/$0'
-  branch-dates = "!f() { git for-each-ref --sort=committerdate refs/${1:-heads}/ --format='%(committerdate:short)\t%(authorname)\t%(refname:short)' | sed 's_origin/__g' | column -t -s'\t' ; } ; f"
+	dt = difftool
+	branchlog = !sh -c \"git log `git oldest-ancestor`..\"
+	branchdiff = !sh -c \"git diff `git oldest-ancestor`..\"
+	permission-reset = !git diff -p -R | grep -E \"^(diff|(old|new) mode)\" | git apply
+	co = checkout
+	st = status
+	mt = mergetool
+	br = branch
+	a = add
+	oldest-ancestor = !zsh -c 'diff -u <(git rev-list --first-parent \"${1:-master}\") <(git rev-list --first-parent \"${2:-HEAD}\") | sed -ne \"s/^ //p\" | head -1' -
+	svnup = svn rebase
+	svnci = svn dcommit
+	#create-pull-request = !sh -c 'stash pull-request $0'
+	#pr = !sh -c 'stash pull-request $0'
+	#browse = !sh -c 'stash browse'
+	#www = !sh -c 'stash browse'
+	log1 = log --oneline
+	flog = log --oneline --decorate=full --graph
+	ilog = !sh -c 'git log --format=\"%Cred%h %Cblue%ad %Cgreen%aN <%aE> %Creset%s\" --date=iso '$@' | peco'
+	fsha = !sh -c 'git log --format=\"%Cred%h %Cblue%ad %Cgreen%aN <%aE> %Creset%s\" --date=iso '$@' | peco | cut -d\\	-f1'
+	clog = log --format='%Cred%h %Cblue%ad %Cgreen%aN <%aE> %G? %Creset%s' --date=iso
+	copr = !sh -c 'git checkout `git remote get-url origin| sed -e 's/\\.git$//g' | tr -d \\n`/pull/$0'
+	branch-dates = "!f() { git for-each-ref --sort=committerdate refs/${1:-heads}/ --format='%(committerdate:short)\t%(authorname)\t%(refname:short)' | sed 's_origin/__g' | column -t -s'\t' ; } ; f"
 
 [core]
-  pager = less -F -X
-  editor = vim
-  whitespace = blank-at-eol,trailing-space
+	pager = less -F -X
+	editor = vim
+	whitespace = blank-at-eol,trailing-space
 
 [color "diff"]
-  whitespace = red reverse
+	whitespace = red reverse
 
 [difftool]
-  prompt = false
+	prompt = false
 
 [mergetool]
-  keepBackup = false
-  prompt = false
+	keepBackup = false
+	prompt = false
 
 [color]
-  ui = true
+	ui = true
 
 [push]
-  default = current
+	default = current
 
 [user]
-  name = Rickard von Essen
-  email = rickard.von.essen@gmail.com
-  signingkey = 0xB7DB909C0672FC49
+	name = Rickard von Essen
+	email = rickard.von.essen@gmail.com
+	signingkey = 0xB7DB909C0672FC49
 
 [hub]
-  protocol = ssh
+	protocol = ssh
 
 [filter "media"]
-  clean = git-media-clean %f
-  smudge = git-media-smudge %f
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
 [filter "lfs"]
-  clean = git-lfs clean %f
-  smudge = git-lfs smudge %f
-  required = true
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
 
 [include]
-  path = .gitconfig.os
+	path = .gitconfig.os
 [commit]
-  gpgsign = true
+	gpgsign = true
 [credential "https://source.developers.google.com"]
 	helper = gcloud.sh

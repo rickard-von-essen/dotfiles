@@ -1,26 +1,26 @@
 # vim: noexpandtab:tabstop=4:shiftwidth=4:syntax=gitconfig
 [mergetool "sourcetree"]
-  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
   trustExitCode = true
 
 [diff]
-  tool = Kaleidoscope
-  renameLimit = 100000
+	tool = Kaleidoscope
+	renameLimit = 100000
 
 [merge]
-  tool = Kaleidoscope
+	tool = Kaleidoscope
 
 [difftool "sourcetree"]
-  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-  trustExitCode = true
-  path = 
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	trustExitCode = true
+	path = 
 
 [difftool "Kaleidoscope"]
-  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 
 [mergetool "Kaleidoscope"]
-  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-  trustExitCode = true
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
 
 [include]
-  path = .gitconfig.class
+	path = .gitconfig.class
