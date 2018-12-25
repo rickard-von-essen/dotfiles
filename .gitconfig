@@ -1,3 +1,4 @@
+# vim: noexpandtab:tabstop=4:shiftwidth=4
 [alias]
   dt = difftool
   branchlog = !sh -c \"git log `git oldest-ancestor`..\"
