@@ -1,1 +1,0 @@
-/Users/rickard.von.essen/.config/fish/conf.d/vmware.fish##Darwin
