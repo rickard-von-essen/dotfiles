@@ -314,6 +314,7 @@ mas "The Journalist", id: 764147223
 mas "Time Out", id: 402592703
 mas "Twitter", id: 409789998
 mas "WhatsApp", id: 1147396723
+mas "WireGuard", id: 1451685025
 mas "Wunderlist", id: 410628904
 mas "Xcode", id: 497799835
 mas "Xee³", id: 639764244
