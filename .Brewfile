@@ -141,6 +141,7 @@ brew "jq"
 brew "json-c"
 brew "jsoncpp"
 brew "kapacitor"
+brew "kubectx"
 brew "kubernetes-cli" # Competes with gcloud-tools
 brew "kubernetes-helm"
 brew "lame"
