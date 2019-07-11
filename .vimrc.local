@@ -102,3 +102,18 @@ let g:tagbar_type_go = {
 	\ 'ctagsbin'  : 'gotags',
 	\ 'ctagsargs' : '-sort -silent'
 \ }
+
+" Close NERDTree window automatically if it's the last
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+let NERDTreeQuitOnOpen = 1
+
+" Open .vimrc in a split
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+" Reload .vimrc
+nnoremap <leader>sv :source $MYVIMRC<cr>
+
+" Abbrevations
+iabbrev @@ rickard.von.essen@gmail.com
+iabbrev @iz@ rickard.von.essen@izettle.com
+iabbrev @dia@ rickard@diabol.se
+iabbrev RvE Rickard von Essen
