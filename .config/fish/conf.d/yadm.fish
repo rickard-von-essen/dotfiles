@@ -1,0 +1,1 @@
+set -x YADM_COMPATIBILITY 1
