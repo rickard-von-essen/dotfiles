@@ -1,5 +1,5 @@
 function java11 -d "Use JDK 11"
-  set -g JAVA_HOME /Library/Java/JavaVirtualMachines/openjdk-11.0.1.jdk/Contents/Home
-  set -g fish_user_path $JAVA_HOME/bin $fish_user_path
+  set -x JAVA_HOME /Library/Java/JavaVirtualMachines/openjdk-11.0.2.jdk/Contents/Home
+  set -x fish_user_paths $JAVA_HOME/bin $fish_user_paths
 end
 
