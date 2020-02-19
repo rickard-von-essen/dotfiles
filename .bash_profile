@@ -1,3 +1,5 @@
+export LC_ALL=en_US.UTF-8
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f /Users/rickard/local/google-cloud-sdk/path.bash.inc ]; then
   source '/Users/rickard/local/google-cloud-sdk/path.bash.inc'
