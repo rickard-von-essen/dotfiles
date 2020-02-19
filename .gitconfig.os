@@ -1,1 +1,1 @@
-/Users/rickard.von.essen/.gitconfig.os##Darwin
+.gitconfig.os##Darwin
