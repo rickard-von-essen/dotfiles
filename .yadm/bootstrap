@@ -19,7 +19,11 @@ if [ "$system_type" = "Linux" ]; then
     "$DIR/bootstrap.fedora"
   fi
 
-  "$DIR/bootstrap.linux"
+  if [ "$dist" = "debian" ]; then
+    "$DIR/bootstrap.debian"
+  fi
+
+  # "$DIR/bootstrap.linux"
 
 fi
 
