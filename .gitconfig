@@ -49,7 +49,7 @@
 	name = Rickard von Essen
 	email = rickard.von.essen@gmail.com
 	#signingkey = 0xB7DB909C0672FC49
-	signingkey = 0x72B4B2BC5665DDEC
+	#signingkey = 0x72B4B2BC5665DDEC
 [hub]
 	protocol = ssh
 
@@ -63,7 +63,5 @@
 
 [include]
 	path = .gitconfig.os
-[commit]
-	gpgsign = true
 [credential "https://source.developers.google.com"]
 	helper = gcloud.sh
