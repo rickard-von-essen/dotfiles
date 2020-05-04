@@ -1,1 +1,14 @@
-set -x PATH $HOME/bin $PATH /usr/sbin /sbin
+set -x PATH $HOME/bin $HOME/.rbenv/bin $HOME/.nodenv/bin $PATH /usr/sbin /sbin
+
+test -d /usr/local/go/bin; and \
+  set -x PATH /usr/local/go/bin $PATH
+
+test -d $HOME/go/bin; and \
+  set -x PATH $HOME/go/bin $PATH
+
+test -d $HOME/local/hub/bin; and \
+  set -x PATH $HOME/local/hub/bin $PATH
+
+test -d /home/linuxbrew/.linuxbrew/bin; and \
+  set -x PATH /home/linuxbrew/.linuxbrew/bin $PATH
+
