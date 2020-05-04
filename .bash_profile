@@ -25,3 +25,4 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+eval "$($HOME/.rbenv/bin/rbenv init -)"
