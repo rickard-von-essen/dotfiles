@@ -25,13 +25,8 @@ bind-key ] paste-buffer
 bind-key -Tcopy-mode-vi v send-keys -X begin-selection
 
 unbind-key -Tcopy-mode-vi y
-bind-key -Tcopy-mode-vi y send-keys -X copy-selection-and-cancel
-#bind-key -Tcopy-mode-vi y send-keys
-#bind-key -Tcopy-mode-vi y send-keys -X copy-pipe-and-cancel "/usr/local/bin/reattach-to-user-namespace pbcopy"
+bind-key -Tcopy-mode-vi y send-keys -X copy-pipe-and-cancel "/usr/local/bin/reattach-to-user-namespace pbcopy"
 
 # Update default binding of `Enter` to also use copy-pipe
-#unbind -Tcopy-mode-vi Enter
-#bind-key -Tcopy-mode-vi Enter send-keys -X copy-pipe-and-cancel "/usr/local/bin/reattach-to-user-namespace pbcopy"
-
-# Enable native Mac OS X copy/paste
-  #set-option -g default-command "/bin/bash -c 'which reattach-to-user-namespace >/dev/null && exec reattach-to-user-namespace $SHELL -l || exec $SHELL -l'"
+unbind -Tcopy-mode-vi Enter
+bind-key -Tcopy-mode-vi Enter send-keys -X copy-pipe-and-cancel "/usr/local/bin/reattach-to-user-namespace pbcopy"
