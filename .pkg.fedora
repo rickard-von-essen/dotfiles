@@ -23,9 +23,9 @@ gimp
 git-extras
 git-lfs
 gnupg2
-gradle
+# gradle
 graphviz
-groovy
+# groovy
 htop
 hub
 ImageMagick
@@ -34,6 +34,8 @@ ipmitool
 irssi
 jq
 kicad
+kitty
+kitty-doc
 kubernetes-client
 lastpass-cli
 moreutils
@@ -50,19 +52,19 @@ powerline-docs
 pinentry
 pv
 pwgen
-python2-hglib
-python2-i3ipc
-python2-psutil
-python2-pyuv
+# python2-hglib
+# python2-i3ipc
+# python2-psutil
+# python2-pyuv
 python3-hglib
 python3-i3ipc
 python3-psutil
-python3-pyuv
+# python3-pyuv
 qemu
 redis
 restic
 s3cmd
-sbt
+# sbt
 ShellCheck
 smartmontools
 snapd
@@ -79,7 +81,7 @@ ykpers
 yubico-piv-tool
 yubikey-manager
 yubikey-personalization-gui
-yubikey-piv-manager
+# yubikey-piv-manager
 yubikey-val
 yubioath-desktop
 yadm
