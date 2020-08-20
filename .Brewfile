@@ -37,7 +37,6 @@ brew "libnet"
 brew "arping"
 brew "docbook"
 brew "asciidoc"
-brew "auto-scaling"
 brew "autoconf"
 brew "autojump", args: ["HEAD"]
 #brew "libusb-compat"
@@ -213,7 +212,6 @@ brew "shellcheck"
 brew "sleepwatcher", restart_service: true
 brew "smake"
 brew "smartmontools"
-brew "smlnj"
 brew "squashfs"
 brew "stlviewer"
 brew "stm32flash"
@@ -253,6 +251,7 @@ brew "osx-cross/avr/avr-gcc"
 brew "px4/px4/gcc-arm-none-eabi"
 brew "rickard-von-essen/formulae/hid_listen"
 
+cask "homebrew/cask-versions/adoptopenjdk8"
 cask "wireshark"
 cask "homebrew/cask-versions/docker-edge"
 cask "1password"
@@ -288,6 +287,7 @@ cask "postico"
 cask "sourcetree"
 cask "spotify"
 cask "steam"
+cask "smlnj"
 cask "tower"
 cask "tunnelblick"
 cask "vagrant"
@@ -304,7 +304,6 @@ cask "yubico-yubikey-manager"
 # AppStore Applications
 mas "Affinity Designer", id: 824171161
 mas "Affinity Photo", id: 824183456
-mas "Bee", id: 726099620
 mas "Clari3D_Free", id: 512516629
 mas "DaisyDisk", id: 411643860
 mas "Disk Drill Media Recovery", id: 431224317
@@ -326,11 +325,9 @@ mas "Pocket", id: 568494494
 mas "Remote Desktop - VNC", id: 472995993
 mas "SketchBook", id: 863486266
 mas "Slack", id: 803453959
-mas "The Journalist", id: 764147223
 mas "Time Out", id: 402592703
 mas "Twitter", id: 409789998
 mas "WhatsApp", id: 1147396723
 mas "WireGuard", id: 1451685025
-mas "Wunderlist", id: 410628904
 mas "Xcode", id: 497799835
 mas "Xee³", id: 639764244
