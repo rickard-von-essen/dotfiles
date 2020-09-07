@@ -1,0 +1,23 @@
+{
+  "common": {
+    "term_truecolor": true
+  },
+  "ext": {
+    "shell": {
+      "colorscheme": "solarized",
+      "theme": "default"
+    },
+    "tmux": {
+      "colorscheme": "solarized",
+      "theme": "local"
+    },
+    "vim": {
+      "colorscheme": "solarized",
+      "theme": "default"
+    },
+    "wm": {
+      "colorscheme": "default",
+      "theme": "default"
+    }
+  }
+}
