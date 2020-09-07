@@ -7,7 +7,7 @@ test -d /usr/share/powerline/bindings/fish; and \
 test -d "$HOME/src/powerline/powerline/bindings/fish"; and \
   set fish_function_path $fish_function_path "$HOME/src/powerline/powerline/bindings/fish"
 
-  #test -d "$HOME/Library/Python/3.7/lib/python/site-packages/powerline/bindings/fish"; and \
-  #set fish_function_path $fish_function_path "$HOME/Library/Python/3.7/lib/python/site-packages/powerline/bindings/fish"
+test -d "$HOME/Library/Python/3.8/lib/python/site-packages/powerline/bindings/fish"; and \
+  set fish_function_path $fish_function_path "$HOME/Library/Python/3.8/lib/python/site-packages/powerline/bindings/fish"
 
 powerline-setup
