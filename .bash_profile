@@ -1,13 +1,13 @@
 export LC_ALL=en_US.UTF-8
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f /Users/rickard/local/google-cloud-sdk/path.bash.inc ]; then
-  source '/Users/rickard/local/google-cloud-sdk/path.bash.inc'
+if [ -f "$HOME/local/google-cloud-sdk/path.bash.inc" ]; then
+  source "$HOME/local/google-cloud-sdk/path.bash.inc"
 fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f /Users/rickard/local/google-cloud-sdk/completion.bash.inc ]; then
-  source '/Users/rickard/local/google-cloud-sdk/completion.bash.inc'
+if [ -f "$HOME/local/google-cloud-sdk/completion.bash.inc" ]; then
+  source "$HOME/local/google-cloud-sdk/completion.bash.inc"
 fi
 
 # >>> conda initialize >>>
@@ -26,3 +26,5 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 eval "$($HOME/.rbenv/bin/rbenv init -)"
+
+export QSYS_ROOTDIR="$HOME/local/intelFPGA_lite/20.1/quartus/sopc_builder/bin"

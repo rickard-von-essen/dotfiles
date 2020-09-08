@@ -1,3 +1,5 @@
 # vim: noexpandtab:tabstop=4:shiftwidth=4:syntax=gitconfig
+[diff]
+	tool = meld
 [include]
 	path = .gitconfig.class
