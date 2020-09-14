@@ -1,0 +1,15 @@
+# vim: set filetype=conf:
+#
+# Status Bar:
+#
+# Read `man 5 sway-bar` for more information about this section.
+bar {
+    position top
+    colors {
+        statusline #ffffff
+        background #323232
+        inactive_workspace #32323200 #32323200 #5c5c5c
+    }
+    status_command python3 /usr/share/powerline/i3/powerline-i3.py
+    font pango:Hasklug Nerd Font 10
+}

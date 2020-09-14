@@ -12,14 +12,14 @@ set $up k
 set $right l
 # Your preferred terminal emulator
 #set $term urxvt256c-ml
-set $term termite
+set $term kitty
 # Your preferred application launcher
 set $menu dmenu_run
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/f28/default/normalish/f28.png fill
+output * bg /usr/share/backgrounds/fedora-workstation/winter-in-bohemia.png fill
 #
 # Example configuration:
 #
@@ -37,6 +37,7 @@ output * bg /usr/share/backgrounds/f28/default/normalish/f28.png fill
 #       natural_scroll enabled
 #       middle_emulation enabled
 #   }
+
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
@@ -178,20 +179,5 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
-
-#
-# Status Bar:
-#
-# Read `man 5 sway-bar` for more information about this section.
-bar {
-    position top
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
-    }
-    status_command python3 /usr/share/powerline/i3/powerline-i3.py
-    font pango:Hasklug Nerd Font 10
-}
 
 include $HOME/.config/sway/config.d/*
