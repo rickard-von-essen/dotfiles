@@ -1,0 +1,7 @@
+# vim: set filetype=conf:
+
+input "1452:781:Rickard_von_Essen’s_Mouse" {
+    tap enabled
+    natural_scroll enabled
+    scroll_factor 5
+}

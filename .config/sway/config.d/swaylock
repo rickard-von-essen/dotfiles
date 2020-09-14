@@ -1,0 +1,12 @@
+# vim: set filetype=conf:
+#
+# Setup swaylock for locking the screen
+#
+
+set $locker 'swaylock -f -e --inside-color 000000b3'
+
+exec swayidle -w \
+  timeout 30 $locker \
+  timeout 60 'swaymsg "output * dpms off"' \
+    resume 'swaymsg "output * dpms on"' \
+  before-sleep $locker
