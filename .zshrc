@@ -13,3 +13,11 @@ fi
 if [ -d $HOME/.nodenv/bin ]; then
   export PATH=$HOME/.nodenv/bin:$PATH
 fi
+
+if [ -f $HOME/.certs/cert.pem ]; then
+  export CURL_CA_BUNDLE=$HOME/.certs/cert.pem
+fi
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
