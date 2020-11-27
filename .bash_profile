@@ -28,3 +28,7 @@ unset __conda_setup
 eval "$($HOME/.rbenv/bin/rbenv init -)"
 
 export QSYS_ROOTDIR="$HOME/local/intelFPGA_lite/20.1/quartus/sopc_builder/bin"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

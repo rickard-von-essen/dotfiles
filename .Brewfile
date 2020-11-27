@@ -132,6 +132,7 @@ brew "oniguruma"
 brew "jq"
 brew "json-c"
 brew "jsoncpp"
+brew "openjdk@11"
 brew "kapacitor"
 brew "kubectx"
 # brew "kubernetes-cli" # Competes with gcloud-tools
