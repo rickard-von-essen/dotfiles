@@ -30,9 +30,15 @@ fi
 
 # -- Generic bootstrap --
 
-mkdir -p $HOME/local
-mkdir -p $HOME/bin
-mkdir -p $HOME/go
+mkdir -p "$HOME/local"
+mkdir -p "$HOME/bin"
+mkdir -p "$HOME/go"
+
+echo "Installing Tmux Plugin Manager"
+if [ ! -d "$HOME/.config/tmux/plugins/tpm" ]; then
+  mkdir -p "$HOME/.config/tmux/plugins"
+  git clone https://github.com/tmux-plugins/tpm "$HOME/.config/tmux/plugins/tpm"
+fi
 
 echo "Installing Vundle and Vim plugins"
 if [ ! -d "$HOME/.vim/bundle/Vundle.vim" ]; then
