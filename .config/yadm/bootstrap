@@ -40,6 +40,12 @@ if [ ! -d "$HOME/.config/tmux/plugins/tpm" ]; then
   git clone https://github.com/tmux-plugins/tpm "$HOME/.config/tmux/plugins/tpm"
 fi
 
+echo "Installing Kitty Themse"
+if [ ! -d "$HOME/.config/kitty/kitty-themes" ]; then
+  mkdir -p "$HOME/.config/kitty"
+  git clone git@github.com:dexpota/kitty-themes.git "$HOME/.config/kitty/kitty-themes"
+fi
+
 echo "Installing Vundle and Vim plugins"
 if [ ! -d "$HOME/.vim/bundle/Vundle.vim" ]; then
   git clone https://github.com/VundleVim/Vundle.vim.git "$HOME/.vim/bundle/Vundle.vim"
