@@ -12,3 +12,6 @@ test -d $HOME/local/hub/bin; and \
 test -d /home/linuxbrew/.linuxbrew/bin; and \
   set -x PATH /home/linuxbrew/.linuxbrew/bin $PATH
 
+test -d $HOME/local/cito/bin; and \
+  set -x PATH $HOME/local/cito/bin $PATH
+
