@@ -1,5 +1,5 @@
 # vi is good
-setw -g mode-keys vi
+set -g mode-keys vi
 
 # use vim-like keys for splits and windows
 bind-key v split-window -h -c "#{pane_current_path}"
@@ -24,7 +24,9 @@ bind-key ] paste-buffer
 bind-key -Tcopy-mode-vi v send-keys -X begin-selection
 
 # Vim style
-bind-key -T copy-mode-vi y send-keys -X copy-pipe-and-cancel "xsel -i -p && xsel -o -p | xsel -i -b"
+unbind-key -Tcopy-mode-vi y
+bind-key -Tcopy-mode-vi y send-keys -X copy-pipe-and-cancel "xsel -i -p && xsel -o -p | xsel -i -b"
 bind-key p run "xsel -o | tmux load-buffer - ; tmux paste-buffer"
 # Update default binding of `Enter` to also use copy-pipe
-bind-key -T copy-mode-vi Enter send-keys -X copy-pipe-and-cancel "xsel -i -p && xsel -o -p | xsel -i -b"
+unbind -Tcopy-mode-vi Enter
+bind-key -Tcopy-mode-vi Enter send-keys -X copy-pipe-and-cancel "xsel -i -b"
