@@ -1,0 +1,96 @@
+" Specify a directory for plugins
+" - For Neovim: stdpath('data') . '/plugged'
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/plugged')
+
+Plug 'vim-ctrlspace/vim-ctrlspace'
+Plug 'mattn/emmet-vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'ericbn/vim-solarized'
+Plug 'michaeljsmith/vim-indent-object'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'mustache/vim-mustache-handlebars'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'leafgarland/typescript-vim'
+Plug 'preservim/tagbar'
+" TODO easytags ?
+Plug 'mileszs/ack.vim'
+Plug 'vim-syntastic/syntastic'
+
+" NerdTree
+Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight', { 'on': 'NERDTreeToggle' }
+
+Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-cucumber'
+Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-pastie'
+Plug 'tpope/vim-ragtag'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-vividchalk'
+Plug 'uarun/vim-protobuf'
+Plug 'junegunn/vim-easy-align'
+Plug 'dag/vim-fish'
+Plug 'vim-airline/vim-airline'
+Plug 'shime/vim-livedown'
+Plug 'hashivim/vim-terraform'
+Plug 'ryanoasis/vim-devicons'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'pangloss/vim-javascript'
+Plug 'wookiehangover/jshint.vim'
+Plug 'slim-template/vim-slim'
+Plug 'vim-ruby/vim-ruby'
+Plug 'derekwyatt/vim-scala'
+Plug 'rodjek/vim-puppet'
+Plug 'modille/groovy.vim'
+Plug 'python-mode/python-mode'
+Plug 'vim-scripts/bash-support.vim'
+Plug 'xolox/vim-shell'
+Plug 'xolox/vim-misc'
+Plug 'tpope/vim-rake'
+Plug 'udalov/kotlin-vim'
+Plug 'neovimhaskell/haskell-vim'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'elzr/vim-json'
+Plug 'berdandy/AnsiEsc.vim'
+Plug 'benmills/vimux'
+Plug 'robbles/logstash.vim'
+Plug 'Shougo/vimproc.vim', { 'do': 'make' }
+Plug 'honza/vim-snippets'
+Plug 'puremourning/vimspector'
+Plug 'godlygeek/tabular'
+Plug 'ervandew/supertab'
+
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'garbas/vim-snipmate'
+
+" Installed with native package manager on Linux
+if has('mac')
+  Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --all' }
+endif
+
+" Initialize plugin system
+call plug#end()
+
+
+"  Plugin 'kchmck/vim-coffee-script'
+"
+"  Plugin 'tomtom/tlib_vim'
+"  Plugin 'vim-scripts/java.vim'
+"
+"  Plugin 'codenothing/jsonlint'
+"
+"  Plugin 'vim-scripts/greplace.vim'
+"  Plugin 'vim-scripts/matchit.zip'
+"  Plugin 'eagletmt/ghcmod-vim'
+"  Plugin 'eagletmt/neco-ghc'
+"  Plugin 'dart-lang/dart-vim-plugin'
+"  Plugin 'rizzatti/dash.vim'
+"  Plugin 'rhysd/git-messenger.vim'
