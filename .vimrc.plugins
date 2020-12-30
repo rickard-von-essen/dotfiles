@@ -74,6 +74,8 @@ Plug 'garbas/vim-snipmate'
 " Installed with native package manager on Linux
 if has('mac')
   Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --all' }
+else
+  Plug '/usr/share/vim-youcompleteme'
 endif
 
 " Initialize plugin system
