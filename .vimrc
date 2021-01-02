@@ -108,6 +108,7 @@ endif
 " Don't copy the contents of an overwritten selection.
 vnoremap p "_dP
 
+
 " Go crazy!
 if filereadable(expand("~/.vimrc.local"))
   " In your .vimrc.local, you might like:
@@ -120,4 +121,10 @@ if filereadable(expand("~/.vimrc.local"))
   " autocmd! bufwritepost .vimrc source ~/.vimrc
   " noremap! jj <ESC>
   source ~/.vimrc.local
+endif
+
+
+" coc.nvim
+if filereadable(expand("~/.config/nvim/coc.vim"))
+  source ~/.config/nvim/coc.vim
 endif
