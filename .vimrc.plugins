@@ -66,6 +66,7 @@ Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'honza/vim-snippets'
 Plug 'puremourning/vimspector'
 Plug 'godlygeek/tabular'
+Plug 'Rasukarusan/vim-block-paste'
 " Plug 'ervandew/supertab' conflicts with coc.nvim
 
 " Plug 'MarcWeber/vim-addon-mw-utils'
