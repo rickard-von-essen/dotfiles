@@ -6,7 +6,7 @@
 set $locker 'swaylock -f -e --inside-color 000000b3'
 
 exec swayidle -w \
-  timeout 300 $locker \
-  timeout 600 'swaymsg "output * dpms off"' \
+  timeout 600 $locker \
+  timeout 720 'swaymsg "output * dpms off"' \
     resume 'swaymsg "output * dpms on"' \
   before-sleep $locker
