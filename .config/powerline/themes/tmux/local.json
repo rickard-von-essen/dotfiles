@@ -17,6 +17,10 @@
             "priority" : 50
          },
          {
+            "function" : "powerline.segments.common.bat.battery",
+            "priority" : 60
+         },
+         {
             "args" : {
                "format" : " %Y-%m-%d"
             },
