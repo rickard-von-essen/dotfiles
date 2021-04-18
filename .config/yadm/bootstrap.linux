@@ -21,7 +21,3 @@ for font in $NERDFONTS; do
 done
 
 fc-cache
-
-if [ ! -d /home/linuxbrew/.linuxbrew ] || [ ! -d $HOME/.linuxbrew ]; then
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
-fi
