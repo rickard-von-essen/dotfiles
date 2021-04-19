@@ -1,5 +1,3 @@
-norcalli/autojump
-
 oh-my-fish/theme-bobthefish
 barnybug/docker-fish-completion
 jethrokuan/fzf
@@ -9,7 +7,5 @@ oh-my-fish/plugin-osx
 sentriz/fish-pipenv
 fisherman/pyenv
 fisherman/rbenv
-
 oh-my-fish/plugin-tmux
-oh-my-fish/plugin-vi-mode
 oh-my-fish/plugin-vundle
