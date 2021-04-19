@@ -116,4 +116,5 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 iabbrev @@ rickard.von.essen@gmail.com
 iabbrev @iz@ rickard.von.essen@izettle.com
 iabbrev @dia@ rickard@diabol.se
+iabbrev @k@ ext.rickard.von@king.com
 iabbrev RvE Rickard von Essen
