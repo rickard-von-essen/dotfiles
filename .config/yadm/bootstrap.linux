@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
 
 GOOGLE_SDK_VER=274.0.1
-NERDFONT_VER=2.0.0
+NERDFONT_VER=2.1.0
 NERDFONTS="DoridSansMono FiraCode FiraMono Go-Mono Hasklig SourceCodePro"
 
 if [ ! -d $HOME/local/google-cloud-sdk ] && [ ! -f /usr/bin/gcloud ]; then
   wget -O /tmp/google-cloud-sdk-${GOOGLE_SDK_VER}-linux-x86_64.tar.gz \
-    https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-${GOOGLE_SDK_VER}-linux-x86_64.tar.gz
-  tar zxvf /tmp/google-cloud-sdk-${GOOGLE_SDK_VER}-linux-x86_64.tar.gz $HOME/local/google-cloud-sdk
+    https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-${GOOGLE_SDK_VER}-linux-x86_64.tar.gz && \
+    mkdir $HOME/local/google-cloud-sdk && \
+    cd $HOME/local/google-cloud-sdk && \
+    tar -zxvf /tmp/google-cloud-sdk-${GOOGLE_SDK_VER}-linux-x86_64.tar.gz $HOME/local/google-cloud-sdk
 fi
 
 mkdir -p $HOME/.local/share/fonts
