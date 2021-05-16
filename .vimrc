@@ -44,6 +44,8 @@ if exists('$TMUX')  " Support resizing in tmux, not needed in Neovim
   endif
 endif
 
+let g:coc_node_path = '~/.asdf/installs/nodejs/16.1.0/bin/node'
+
 " keyboard shortcuts
 let mapleader = ','
 noremap <C-h> <C-w>h
