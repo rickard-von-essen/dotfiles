@@ -60,6 +60,7 @@ python3-hglib
 python3-i3ipc
 python3-psutil
 # python3-pyuv
+python3-neovim
 qemu
 redis
 restic
@@ -94,3 +95,4 @@ vagrant-libvirt-doc
 vagrant-lxc
 vagrant-lxc-doc
 wireshark
+wl-clipboard
