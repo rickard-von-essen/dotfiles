@@ -1,15 +1,18 @@
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+# .bashrc
 
-if [ -d "/home/linuxbrew/.linuxbrew/bin" ]; then
-  export PATH=/home/linuxbrew/.linuxbrew/bin:$PATH
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
 fi
 
-if [ -d "$HOME/.rbenv/bin" ]; then
-  export PATH=$HOME/.rbenv/bin:$PATH
+# User specific environment
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
+then
+    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 fi
+export PATH
 
-if [ -d "$HOME/.nodenv/bin" ]; then
-  export PATH=$HOME/.nodenv/bin:$PATH
-fi
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
 
-export QSYS_ROOTDIR="$HOME/local/intelFPGA_lite/20.1/quartus/sopc_builder/bin"
+# User specific aliases and functions
