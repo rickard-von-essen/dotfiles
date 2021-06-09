@@ -1,0 +1,8 @@
+window:
+  decorations: none
+  startup_mode: Maximized
+
+font:
+  normal:
+    family: Fira Mono Nerd Font
+    size: 8.0
