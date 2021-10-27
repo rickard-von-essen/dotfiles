@@ -1,10 +1,6 @@
-oh-my-fish/theme-bobthefish
 barnybug/docker-fish-completion
 jethrokuan/fzf
 fisherman/getopts
-oh-my-fish/plugin-nodenv
 oh-my-fish/plugin-osx
 sentriz/fish-pipenv
-fisherman/pyenv
-fisherman/rbenv
 oh-my-fish/plugin-tmux
