@@ -10,6 +10,12 @@ if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
 then
     PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 fi
+
+if ! [[ "$PATH" =~ "/home/linuxbrew/.linuxbrew/bin:" ]]
+then
+    PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+fi
+
 export PATH
 
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
