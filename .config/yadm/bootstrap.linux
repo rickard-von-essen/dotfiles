@@ -4,6 +4,11 @@ GOOGLE_SDK_VER=274.0.1
 NERDFONT_VER=2.1.0
 NERDFONTS="DoridSansMono FiraCode FiraMono Go-Mono Hasklig SourceCodePro"
 
+if [ ! -d $HOME/.asdf ]; then
+  git clone https://github.com/asdf-vm/asdf.git $HOME/.asdf --branch v0.8.1
+  ln -s $HOME/.asdf/completions/asdf.fish $HOME/.config/fish/completions
+fi
+
 if [ ! -d $HOME/local/google-cloud-sdk ] && [ ! -f /usr/bin/gcloud ]; then
   wget -O /tmp/google-cloud-sdk-${GOOGLE_SDK_VER}-linux-x86_64.tar.gz \
     https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-${GOOGLE_SDK_VER}-linux-x86_64.tar.gz && \
