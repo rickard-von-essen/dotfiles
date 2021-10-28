@@ -1,3 +1,5 @@
+set -u fish_key_bindings fish_vi_key_bindings
+
 test -d /usr/share/powerline/fish; and \
   set fish_function_path $fish_function_path /usr/share/powerline/fish
 
