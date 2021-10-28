@@ -19,6 +19,7 @@ cask "xquartz"
 
 # Binaries
 brew "64tass"
+brew "asdf"
 brew "ack"
 brew "bat"
 brew "openssl"
