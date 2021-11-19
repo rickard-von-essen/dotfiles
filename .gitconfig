@@ -26,7 +26,6 @@
 
 [core]
 	pager = less -F -X
-	editor = vim
 	whitespace = blank-at-eol,trailing-space
 
 [color "diff"]
