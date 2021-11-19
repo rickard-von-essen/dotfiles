@@ -1,1 +1,1 @@
-set -x PATH $PATH $HOME/projects/devops-tools/aws-login
+fish_add_path -P $HOME/projects/devops-tools/aws-login
