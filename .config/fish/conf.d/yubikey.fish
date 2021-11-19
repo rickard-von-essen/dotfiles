@@ -6,6 +6,13 @@ function totp -a command -a filter -d "Get/List totp from Yubikey"
     ykman -d $DEVICE_ID oath list
 
   else if [ $command = "get" ]
-    ykman -d $DEVICE_ID oath accounts code -s $filter | pbcopy
+
+    set CLIPBOARD wl-copy
+
+    if [ $OSTYPE = "darwin" ]
+      set CLIPBOARD pbcopy
+    end
+
+    ykman -d $DEVICE_ID oath accounts code -s $filter | $CLIPBOARD
   end
 end
