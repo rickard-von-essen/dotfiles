@@ -12,6 +12,7 @@ dmenu
 dnsmasq
 dos2unix
 etcd
+fd-find
 flatpak
 flatpak-builder
 findutils
@@ -64,6 +65,7 @@ python3-neovim
 qemu
 redis
 restic
+ripgrep
 s3cmd
 # sbt
 ShellCheck
