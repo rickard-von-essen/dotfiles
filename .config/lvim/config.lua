@@ -8,13 +8,16 @@ an executable
 ]]
 -- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
 
+vim.g.tokyonight_style = "night"
+
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = true
 lvim.lint_on_save = true
 -- lvim.colorscheme = "NeoSolarized"
 -- lvim.colorscheme = "space"
-lvim.colorscheme = "onedarker"
+lvim.colorscheme = "tokyonight"
+-- lvim.colorscheme = "onedarker"
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
