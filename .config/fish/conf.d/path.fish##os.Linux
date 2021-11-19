@@ -1,22 +1,31 @@
-set -x PATH $HOME/bin $HOME/.rbenv/bin $HOME/.nodenv/bin $PATH /usr/sbin /sbin
+fish_add_path -P $HOME/bin $HOME/.rbenv/bin $HOME/.nodenv/bin /usr/sbin /usr/bin /sbin /bin
 
 test -d /usr/local/go/bin; and \
-  set -x PATH /usr/local/go/bin $PATH
+  fish_add_path -P /usr/local/go/bin
 
 test -d $HOME/go/bin; and \
-  set -x PATH $HOME/go/bin $PATH
+  fish_add_path -P $HOME/go/bin
 
 test -d $HOME/local/hub/bin; and \
-  set -x PATH $HOME/local/hub/bin $PATH
+  fish_add_path -P $HOME/local/hub/bin
 
 test -d /home/linuxbrew/.linuxbrew/bin; and \
-  set -x PATH /home/linuxbrew/.linuxbrew/bin $PATH
+  fish_add_path -P /home/linuxbrew/.linuxbrew/bin
 
 test -d $HOME/local/cito/bin; and \
-  set -x PATH $HOME/local/cito/bin $PATH
+  fish_add_path -P $HOME/local/cito/bin
 
 test -d $HOME/.local/bin; and \
-  set -x PATH $HOME/.local/bin $PATH
+  fish_add_path -P $HOME/.local/bin
 
-test -d (asdf which python | sed -e 's/\(.*\)\/python$/\1/'); and \
-  set -x PATH (asdf which python | sed -e 's/\(.*\)\/python$/\1/') $PATH
+test -d $HOME/local/nvim/bin; and \
+  fish_add_path -P $HOME/local/nvim/bin
+
+test -d $HOME/.asdf/bin; and \
+  fish_add_path -P $HOME/.asdf/bin
+
+test -d $HOME/.asdf/shims; and \
+  fish_add_path -P $HOME/.asdf/shims
+
+test -d ($HOME/.asdf/bin/asdf which python | sed -e 's/\(.*\)\/python$/\1/'); and \
+  fish_add_path -P ($HOME/.asdf/bin/asdf which python | sed -e 's/\(.*\)\/python$/\1/')

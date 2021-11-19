@@ -1,4 +1,4 @@
-set -x PATH /opt/vagrant/bin $PATH
+fish_add_path -P /opt/vagrant/bin
 #set -x VAGRANT_DEFAULT_PROVIDER 'parallels'
 set -x VAGRANT_DEFAULT_PROVIDER 'vmware_fusion'
 
