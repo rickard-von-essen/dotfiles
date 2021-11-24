@@ -12,7 +12,7 @@ vim.g.tokyonight_style = "night"
 
 -- general
 lvim.log.level = "warn"
-lvim.format_on_save = true
+lvim.format_on_save = false
 lvim.lint_on_save = true
 -- lvim.colorscheme = "NeoSolarized"
 -- lvim.colorscheme = "space"
@@ -69,6 +69,8 @@ lvim.builtin.nvimtree.show_icons.git = 0
 lvim.builtin.treesitter.ensure_installed = {
   "bash",
   "c",
+  "fish",
+  "hcl",
   "javascript",
   "json",
   "lua",
@@ -151,6 +153,7 @@ lvim.plugins = {
     cmd = "TroubleToggle",
   },
   {"overcache/NeoSolarized"},
+  {"junegunn/vim-easy-align"},
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
