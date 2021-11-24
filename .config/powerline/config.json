@@ -4,19 +4,19 @@
   },
   "ext": {
     "shell": {
-      "colorscheme": "solarized",
+      "colorscheme": "tokyonight_storm",
       "theme": "default"
     },
     "tmux": {
-      "colorscheme": "solarized",
+      "colorscheme": "tokyonight_storm",
       "theme": "local"
     },
     "vim": {
-      "colorscheme": "solarized",
+      "colorscheme": "tokyonight_storm",
       "theme": "default"
     },
     "wm": {
-      "colorscheme": "default",
+      "colorscheme": "tokyonight_storm",
       "theme": "default"
     }
   }
