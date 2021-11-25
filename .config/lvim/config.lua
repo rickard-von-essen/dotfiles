@@ -8,16 +8,17 @@ an executable
 ]]
 -- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
 
-vim.g.tokyonight_style = "night"
+vim.g.tokyonight_style = "storm"
 
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = false
 lvim.lint_on_save = true
+
 -- lvim.colorscheme = "NeoSolarized"
 -- lvim.colorscheme = "space"
-lvim.colorscheme = "tokyonight"
 -- lvim.colorscheme = "onedarker"
+lvim.colorscheme = "tokyonight"
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
@@ -126,9 +127,13 @@ lvim.builtin.treesitter.highlight.enabled = true
 -- -- set a formatter, this will override the language server formatting capabilities (if it exists)
 -- local formatters = require "lvim.lsp.null-ls.formatters"
 -- formatters.setup {
---   { exe = "black" },
+--   { exe = "black", filetypes = { "python" } },
+--   { exe = "isort", filetypes = { "python" } },
 --   {
 --     exe = "prettier",
+--     ---@usage arguments to pass to the formatter
+--     -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
+--     args = { "--print-with", "100" },
 --     ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
 --     filetypes = { "typescript", "typescriptreact" },
 --   },
@@ -137,23 +142,29 @@ lvim.builtin.treesitter.highlight.enabled = true
 -- -- set additional linters
 -- local linters = require "lvim.lsp.null-ls.linters"
 -- linters.setup {
---   { exe = "black" },
+--   { exe = "flake8", filetypes = { "python" } },
 --   {
---     exe = "eslint_d",
+--     exe = "shellcheck",
+--     ---@usage arguments to pass to the formatter
+--     -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
+--     args = { "--severity", "warning" },
+--   },
+--   {
+--     exe = "codespell",
 --     ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
---     filetypes = { "javascript", "javascriptreact" },
+--     filetypes = { "javascript", "python" },
 --   },
 -- }
 
 -- Additional Plugins
 lvim.plugins = {
-  {"folke/tokyonight.nvim"},
-  {
-    "folke/trouble.nvim",
-    cmd = "TroubleToggle",
-  },
-  {"overcache/NeoSolarized"},
-  {"junegunn/vim-easy-align"},
+    {"folke/tokyonight.nvim"},
+    {
+      "folke/trouble.nvim",
+      cmd = "TroubleToggle",
+    },
+    {"overcache/NeoSolarized"},
+    {"junegunn/vim-easy-align"},
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
