@@ -1,7 +1,7 @@
 {
 	"name": "TokyoNight Storm",
 	"groups": {
-    "mode":                       { "fg": "tokyonight:red", "bg": "tokyonight:dark3", "attrs": [] },
+    "mode":                       { "fg": "tokyonight:yellow", "bg": "tokyonight:dark3", "attrs": [] },
 		"information:additional":     { "fg": "tokyonight:fg_dark", "bg": "tokyonight:dark3", "attrs": [] },
 		"information:regular":        { "fg": "tokyonight:cyan", "bg": "tokyonight:dark3", "attrs": ["bold"] },
 		"information:highlighted":    { "fg": "tokyonight:fg_dark", "bg": "tokyonight:dark3", "attrs": ["bold"]},
@@ -30,12 +30,14 @@
 		"hostname":                   { "fg": "tokyonight:fg_dark", "bg": "tokyonight:dark3", "attrs": [] },
 		"environment":                { "fg": "tokyonight:fg_dark", "bg": "tokyonight:green", "attrs": [] },
 		"attached_clients":           { "fg": "tokyonight:fg_dark", "bg": "tokyonight:green", "attrs": [] },
-		"date":                       { "fg": "tokyonight:cyan", "bg": "tokyonight:bg", "attrs": [] },
-		"time":                       { "fg": "tokyonight:cyan", "bg": "tokyonight:bg", "attrs": ["bold"] },
-		"time:divider":               { "fg": "tokyonight:cyan", "bg": "tokyonight:bg", "attrs": [] },
-		"system_load":                { "fg": "tokyonight:cyan", "bg": "tokyonight:blue7", "attrs": [] },
-		"weather_temp_gradient":      { "fg": "blue_red", "bg": "tokyonight:blue7", "attrs": [] },
-		"weather":                    { "fg": "tokyonight:cyan", "bg": "tokyonight:blue7", "attrs": [] },
+    "battery":                    { "fg": "tokyonight:cyan", "bg": "tokyonight:dark5", "attrs": [] },
+    "battery_gradient":           { "fg": "tokyonight:cyan", "bg": "tokyonight:dark3", "attrs": [] },
+		"date":                       { "fg": "tokyonight:blue", "bg": "tokyonight:bg_dark", "attrs": [] },
+		"time":                       { "fg": "tokyonight:blue", "bg": "tokyonight:bg_dark", "attrs": ["bold"] },
+		"time:divider":               { "fg": "tokyonight:cyan", "bg": "tokyonight:bg_dark", "attrs": [] },
+		"system_load":                { "fg": "tokyonight:blue", "bg": "tokyonight:blue7", "attrs": [] },
+    "weather_temp_gradient":      { "fg": "blue_red", "bg": "tokyonight:blue7", "attrs": [] },
+    "weather":                    { "fg": "tokyonight:blue", "bg": "tokyonight:blue7", "attrs": [] },
 		"uptime":                     { "fg": "tokyonight:blue", "bg": "tokyonight:blue7", "attrs": [] }
 	}
 }
