@@ -1,42 +1,56 @@
 {
-   "segments" : {
-      "right" : [
-         {
-            "args" : {
-                "seconds_format" : ""
-            },
-            "function" : "powerline.segments.common.sys.uptime",
-            "priority" : 50
-         },
-         {
-            "args" : {
-                "short" : "True",
-                "format" : " {avg:.1f}"
-            },
-            "function" : "powerline.segments.common.sys.system_load",
-            "priority" : 50
-         },
-         {
-            "function" : "powerline.segments.common.bat.battery",
-            "priority" : 60
-         },
-         {
-            "args" : {
-               "format" : " %Y-%m-%d"
-            },
-            "function" : "powerline.segments.common.time.date"
-         },
-         {
-            "args" : {
-               "format" : " %H:%M",
-               "istime" : true
-            },
-            "function" : "powerline.segments.common.time.date",
-            "name" : "time"
-         },
-         {
-            "function" : "powerline.segments.common.net.hostname"
-         }
-      ]
-   }
+  "segments": {
+    "right": [
+      {
+        "args": {
+          "unit": "C",
+          "location_query": "stockholm, sweden",
+          "temp_coldest": -10,
+          "temp_hottest": 30,
+          "icons": {
+            "day": " ",
+            "blustery": " ",
+            "rainy": " ",
+            "cloudy": " ",
+            "snowy": " ",
+            "stormy": " ",
+            "foggy": " ",
+            "sunny": " ",
+            "night": " ",
+            "windy": " ",
+            "not_available": " ",
+            "unknown": " "
+          }
+        },
+        "function": "powerline.segments.common.wthr.weather",
+        "priority": 50
+      },
+      {
+        "args": {
+          "short": "True",
+          "format": " {avg:.1f}"
+        },
+        "function": "powerline.segments.common.sys.system_load",
+        "priority": 50
+      },
+      {
+        "function": "powerline.segments.common.bat.battery",
+        "priority": 60
+      },
+      {
+        "args": {
+          "format": "%Y-%m-%d"
+        },
+        "function": "powerline.segments.common.time.date"
+      },
+      {
+        "args": {
+          "format": "%H:%M",
+          "istime": true
+        },
+        "function": "powerline.segments.common.time.date",
+        "name": "time"
+      }
+    ]
+  }
 }
