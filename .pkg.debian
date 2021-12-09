@@ -1,0 +1,99 @@
+ansible
+apt-utils
+autojump
+# avrdude
+awscli
+build-essential
+# bats
+colordiff
+cmake
+ctags
+exuberant-ctags
+#cvs
+# dfu-programmer
+# dfu-util
+# dmenu
+# dnsmasq
+dos2unix
+# etcd
+# flatpak
+# flatpak-builder
+findutils
+# firefox-wayland
+fish
+# freerdp
+# go
+google-cloud-sdk
+# gimp
+git-extras
+git-lfs
+gnupg2
+# gradle
+# graphviz
+# groovy
+htop
+# hub # TODO manualy installed
+# ImageMagick
+# i3status
+# ipmitool
+# irssi
+jq
+# kicad
+# kubernetes-client from gcloud instead
+lastpass-cli
+libssl-dev
+libreadline-dev
+moreutils
+ncftp
+neovim
+# nginx
+ngrep
+nmap
+# pandoc
+tree
+pass
+python3-powerline
+python3-powerline-gitstatus
+powerline-doc
+pinentry-tty
+pinentry-curses
+pv
+pwgen
+python3-hglib
+# python3-i3ipc
+python3-psutil
+# python3-pyuv
+python3-pip
+# qemu
+# redis
+restic
+s3cmd
+# sbt
+shellcheck
+# smartmontools
+# snapd
+# subversion
+# sway
+# terminator
+silversearcher-ag
+# tigervnc
+tmux
+# tmux-powerline
+topgit
+# ykclient
+yubico-piv-tool
+yubikey-manager
+yubikey-personalization
+yubikey-personalization-gui
+yubioath-desktop
+yadm
+vim
+# vim-powerline # TODO
+# vagrant
+# vagrant-doc
+# vagrant-libvirt
+# vagrant-libvirt-doc
+# vagrant-lxc
+# vagrant-lxc-doc
+# wireshark
+zlib1g-dev

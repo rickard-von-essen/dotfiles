@@ -1,0 +1,4 @@
+cat "$HOME/.pkg.debian" | egrep -v '^#'  | sudo xargs apt install -y
+cat "$HOME/.pkg.snaps" | sudo xargs snap install
+# sudo ln -s /var/lib/snapd/snap /
+# cat "$HOME/.pkg.snaps.classic" | sudo xargs -I= snap install --classic =
