@@ -17,22 +17,5 @@ sudo dnf install -y docker-ce
 sudo usermod -aG docker $USER
 sudo systemctl start docker
 
-# Termite - TODO fork and fix this
-# sudo dnf copr -y enable wyvie/termite
-# sudo dnf install -y termite
-
 # Build Tools
 sudo dnf groupinstall -y development-tools
-
-# rbenv
-curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash
-
-# nodenv
-if [ ! -d $HOME/.nodenv ]; then
-  git clone https://github.com/nodenv/nodenv.git $HOME/.nodenv
-fi
-
-. .bashrc
-if [ ! -d $(nodenv root)/plugins/node-build ]; then
-  git clone https://github.com/nodenv/node-build.git $(nodenv root)/plugins/node-build
-fi
