@@ -75,5 +75,10 @@ fi
 echo "Python 3 Modules"
 cat $HOME/.pkg.py3 | xargs pip3 install --user
 
+echo "Installing ASDF VM"
+git clone https://github.com/asdf-vm/asdf.git $HOME/.asdf --branch v0.10.2
+source $HOME/.asdf/asdf.fish
+cat $HOME/.asdf-plugins | xargs -I= asdf plugin add =
+
 echo "Updating the yadm repo origin URL"
 yadm remote set-url origin "git@github.com:rickard-von-essen/dotfiles.git"
