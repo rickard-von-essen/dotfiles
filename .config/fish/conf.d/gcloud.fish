@@ -1,3 +1,7 @@
+# Force using new gcloud auth for GKE
+# https://cloud.google.com/blog/products/containers-kubernetes/kubectl-auth-changes-in-gke
+set -x USE_GKE_GCLOUD_AUTH_PLUGIN True
+
 # Gcloud don't work well with Python 3.10 yet
 set -x CLOUDSDK_PYTHON (asdf which python)
 
