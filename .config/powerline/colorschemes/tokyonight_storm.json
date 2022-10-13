@@ -1,6 +1,16 @@
 {
 	"name": "TokyoNight Storm",
 	"groups": {
+    "active_window_status":       { "fg": "tokyonight:fg_dark", "bg": "tokyonight:dark3", "attrs": ["bold"]},
+    "window_status":              { "fg": "tokyonight:cyan", "bg": "tokyonight:dark3", "attrs": ["bold"] },
+		"activity_status":            { "fg": "tokyonight:fg_dark", "bg": "tokyonight:yellow", "attrs": [] },
+		"bell_status":                { "fg": "tokyonight:fg_dark", "bg": "tokyonight:red", "attrs": ["bold"] },
+		"window":                     "information:additional",
+		"window:current":             "information:regular",
+		"window:divider":             { "fg": "tokyonight:bg_dark", "bg": "tokyonight:dark3", "attrs": [] },
+		"window_name":                { "fg": "tokyonight:bg_dark", "bg": "tokyonight:blue", "attrs": [] },
+    "session":                    { "fg": "tokyonight:yellow", "bg": "tokyonight:dark3", "attrs": [] },
+		"session:prefix":             { "fg": "tokyonight:cyan", "bg": "tokyonight:blue7", "attrs": [] },
     "mode":                       { "fg": "tokyonight:yellow", "bg": "tokyonight:dark3", "attrs": [] },
 		"information:additional":     { "fg": "tokyonight:fg_dark", "bg": "tokyonight:dark3", "attrs": [] },
 		"information:regular":        { "fg": "tokyonight:cyan", "bg": "tokyonight:dark3", "attrs": ["bold"] },
@@ -38,6 +48,10 @@
 		"system_load":                { "fg": "tokyonight:blue", "bg": "tokyonight:blue7", "attrs": [] },
     "weather_temp_gradient":      { "fg": "blue_red", "bg": "tokyonight:blue7", "attrs": [] },
     "weather":                    { "fg": "tokyonight:blue", "bg": "tokyonight:blue7", "attrs": [] },
-		"uptime":                     { "fg": "tokyonight:blue", "bg": "tokyonight:blue7", "attrs": [] }
+		"uptime":                     { "fg": "tokyonight:blue", "bg": "tokyonight:blue7", "attrs": [] },
+    "k8s":                        { "fg": "tokyonight:blue", "bg": "tokyonight:dark3", "attrs": [] },
+    "k8s_namespace":              { "fg": "tokyonight:red",  "bg": "tokyonight:dark3", "attrs": [] },
+    "k8s_context":                { "fg": "tokyonight:blue", "bg": "tokyonight:dark3", "attrs": [] },
+    "k8s:divider":                { "fg": "gray4",           "bg": "tokyonight:dark3", "attrs": [] }
 	}
 }

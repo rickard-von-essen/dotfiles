@@ -5,7 +5,7 @@
   "ext": {
     "shell": {
       "colorscheme": "tokyonight_storm",
-      "theme": "default"
+      "theme": "local"
     },
     "tmux": {
       "colorscheme": "tokyonight_storm",
