@@ -1,3 +1,4 @@
+amtool                       https://github.com/rickard-von-essen/asdf-amtool.git
 boundary                     https://github.com/asdf-community/asdf-hashicorp.git
 consul                       https://github.com/asdf-community/asdf-hashicorp.git
 direnv                       https://github.com/asdf-community/asdf-direnv.git
@@ -8,6 +9,7 @@ levant                       https://github.com/asdf-community/asdf-hashicorp.gi
 nodejs                       https://github.com/asdf-vm/asdf-nodejs.git
 nomad                        https://github.com/asdf-community/asdf-hashicorp.git
 packer                       https://github.com/asdf-community/asdf-hashicorp.git
+promtool                     https://github.com/looztra/asdf-promtool.git
 rancher                      https://github.com/abinet/asdf-rancher.git
 ruby                         https://github.com/asdf-vm/asdf-ruby.git
 rust                         https://github.com/asdf-community/asdf-rust.git
