@@ -47,7 +47,7 @@
 [user]
 	name = Rickard von Essen
 	email = rickard.von.essen@gmail.com
-	signingkey = 0xB7DB909C0672FC49
+	signingkey = 7C8F9BC8B2E6BB2A
 [hub]
 	protocol = ssh
 
@@ -65,3 +65,5 @@
 	helper = gcloud.sh
 [pull]
 	ff = only
+[commit]
+	gpgsign = true
