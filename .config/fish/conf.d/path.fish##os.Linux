@@ -29,5 +29,14 @@ test -d $HOME/local/cito/bin; and \
 test -d $HOME/.local/bin; and \
   fish_add_path -P $HOME/.local/bin
 
+test -d $HOME/.asdf/bin; and \
+  fish_add_path --move -pP $HOME/.asdf/bin
+
+test -d $HOME/.asdf/shims; and \
+  fish_add_path --move -pP $HOME/.asdf/bin
+
+
 test -d ($HOME/.asdf/bin/asdf which python | sed -e 's/\(.*\)\/python$/\1/'); and \
   fish_add_path -P ($HOME/.asdf/bin/asdf which python | sed -e 's/\(.*\)\/python$/\1/')
+
+
