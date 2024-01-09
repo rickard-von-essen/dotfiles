@@ -1,0 +1,3 @@
+set -x LOKI_ADDR https://observatory-logs-query.int.p.midasplayer.cloud
+set -x LOKI_ORG_ID shared-prod
+
