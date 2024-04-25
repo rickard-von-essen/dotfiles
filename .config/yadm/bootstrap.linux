@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 GOOGLE_SDK_VER=274.0.1
-NERDFONT_VER=2.1.0
-NERDFONTS="DoridSansMono FiraCode FiraMono Go-Mono Hasklig SourceCodePro"
+NERDFONT_VER=3.2.1
+NERDFONTS="DoridSansMono FiraCode FiraMono Go-Mono Hasklig JetBrainsMono SourceCodePro SpaceMono Symbols"
 
 if [ ! -d $HOME/.asdf ]; then
   git clone https://github.com/asdf-vm/asdf.git $HOME/.asdf --branch v0.8.1
