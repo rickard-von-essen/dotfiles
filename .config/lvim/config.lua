@@ -11,6 +11,9 @@ an executable
 vim.g.tokyonight_style = "storm"
 vim.opt.shell = "/bin/sh"
 
+-- Github Copilot
+vim.g.copilot_workspace_folders = '["~/src/*", "~/projects/*"]'
+
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = false
@@ -173,7 +176,8 @@ lvim.plugins = {
     "folke/trouble.nvim",
     cmd = "TroubleToggle",
   },
-  {"overcache/NeoSolarized"}
+  {"overcache/NeoSolarized"},
+  {"github/copilot.vim"}
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
