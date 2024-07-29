@@ -2,3 +2,4 @@
 .gitconfig.class##class.king filter=git-crypt diff=git-crypt
 .config/fish/conf.d/*class.king filter=git-crypt diff=git-crypt
 .config/fish/functions/lpw.fish filter=git-crypt diff=git-crypt
+.config/fish/functions/aws-vault-login.fish filter=git-crypt diff=git-crypt
