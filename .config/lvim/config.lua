@@ -11,9 +11,6 @@ an executable
 vim.g.tokyonight_style = "storm"
 vim.opt.shell = "/bin/sh"
 
--- Github Copilot
-vim.g.copilot_workspace_folders = '["~/src/*", "~/projects/*"]'
-
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = false
@@ -177,7 +174,19 @@ lvim.plugins = {
     cmd = "TroubleToggle",
   },
   {"overcache/NeoSolarized"},
-  {"github/copilot.vim"}
+  -- {"github/copilot.vim"}
+  {
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    event = "InsertEnter",
+  },
+  {
+    "zbirenbaum/copilot-cmp",
+    after = { "copilot.lua" },
+    config = function()
+      require("copilot_cmp").setup()
+    end,
+  },
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
@@ -193,3 +202,26 @@ lvim.plugins = {
 --     require("nvim-treesitter.highlight").attach(0, "bash")
 --   end,
 -- })
+
+
+-- Github Copilot
+-- vim.g.copilot_workspace_folders = '["~/src/*", "~/projects/*"]'
+
+local ok, copilot = pcall(require, "copilot")
+if not ok then
+  return
+end
+
+copilot.setup {
+  suggestion = {
+    keymap = {
+      accept = "<c-l>",
+      next = "<c-j>",
+      prev = "<c-k>",
+      dismiss = "<c-h>",
+    },
+  },
+}
+
+local opts = { noremap = true, silent = true }
+vim.api.nvim_set_keymap("n", "<c-s>", "<cmd>lua require('copilot.suggestion').toggle_auto_trigger()<CR>", opts)
